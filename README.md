@@ -1,12 +1,22 @@
 # Parkinson's Disease Prediction
 
 ## Overview
-This project predicts Parkinson’s disease severity using sensor data.
+This project predicts the presence of Parkinson's disease using biomedical voice measurements. 
+It uses the UCI Parkinson's Disease Detection dataset, which contains acoustic features extracted 
+from sustained vowel phonations recorded from both healthy individuals and Parkinson's patients.
 
 ## Features
-- Data preprocessing
-- Feature engineering
-- Machine learning model
+- Data preprocessing (handling class imbalance, normalization)
+- Feature engineering on voice/acoustic biomarkers (jitter, shimmer, HNR, nonlinear dynamics)
+- SVM-based classification model
+- Achieved 88.46% accuracy on the classification task
+
+## Dataset
+The dataset consists of biomedical voice measurements including:
+- **Frequency variation (Jitter)**: MDVP:Jitter(%), MDVP:RAP, MDVP:PPQ, Jitter:DDP
+- **Amplitude variation (Shimmer)**: MDVP:Shimmer, Shimmer:APQ3, Shimmer:APQ5, MDVP:APQ
+- **Noise measures**: NHR, HNR
+- **Nonlinear dynamical complexity measures**: RPDE, D2, DFA, spread1, spread2, PPE
 
 ## Tech Stack
 - Python
